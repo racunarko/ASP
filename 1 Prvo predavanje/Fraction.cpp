@@ -19,15 +19,6 @@ public:
     ~Fraction();
 };
 
-Fraction::Fraction(/* args */)
-{
-}
-
-Fraction::~Fraction()
-{
-}
-
-
 int main() {
 
     return 0;
