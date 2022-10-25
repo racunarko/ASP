@@ -9,6 +9,7 @@ private:
 public:
     int b;
     int n;
+    Fraction() {}
     Fraction(int b, int n) : b(b), n(n) { }
     Fraction operator+(const Fraction f2) {
         int new_n = this->n * f2.n;
@@ -16,10 +17,17 @@ public:
         Fraction f3(new_b, new_n);
         return f3;
     }
-    ~Fraction();
+
+    friend ostream& operator<<(ostream& os, const Fraction f) {
+        os << f.b << "/" << f.n << endl;
+        return os;
+    }   
 };
 
 int main() {
-
+    Fraction f = {5, 2};
+    Fraction *polje = new Fraction[5];
+    delete [] polje;
+    cout << f;
     return 0;
 }
