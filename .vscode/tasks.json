@@ -9,7 +9,8 @@
                 "-stdlib=libc++",
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
-                "-g",
+                "-pedantic-errors",
+                "-Wall",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
